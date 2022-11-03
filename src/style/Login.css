@@ -1,0 +1,16 @@
+.sign-in {
+  background-color: transparent;
+  height: 4rem;
+  width: 10rem;
+  color: #f8f0de;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 200;
+  font-family: 'Kanit', sans-serif;
+  border: 1.4px solid #f8f0de;
+}
+
+.sign-in:hover {
+  background-color: #f8f0de;
+  color: #c9543a;
+}
