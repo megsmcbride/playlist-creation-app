@@ -1,16 +1,23 @@
 import Login from "./components/Login";
-import "./App.css";
 import SideNav from "./components/SideNav";
+import Content from "./components/Content";
+import "./App.css";
 
 const code = new URLSearchParams(window.location.search).get("code");
-console.log("here", code);
 
 function App() {
   const userID = JSON.parse(localStorage.getItem("userID"));
   return (
     <div className="App">
       {code ? (
-        <SideNav code={code} />
+        <div className="layout">
+          <section className="sidenav">
+            <SideNav code={code} />
+          </section>
+          <section className="content">
+            <Content />
+          </section>
+        </div>
       ) : (
         <div>
           <h2 className="header">collabify</h2>
@@ -19,7 +26,7 @@ function App() {
             <p className="intro-message">
               Sign in to create your own custom playlist
             </p>
-          <Login />
+            <Login />
           </div>
         </div>
       )}
